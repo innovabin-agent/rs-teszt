@@ -1,4 +1,5 @@
 use std::env;
+use std::thread;
 
 
 const BAZ: &str = env!("BAZ");
@@ -12,5 +13,7 @@ fn main() {
     for (key, value) in env::vars() {
         println!("{}: {}", key, value);
     }
+
+    thread::park();
 
 }
