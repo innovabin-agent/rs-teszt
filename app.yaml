@@ -1,0 +1,14 @@
+name: rs-teszt
+services:
+
+  - name: app
+    build_envs:
+      - key: FOO
+        value: lorem
+      - key: BAR
+        value: ipsum
+    envs:
+      - key: FOO
+        value: lorem
+      - key: BAR
+        value: ipsum
