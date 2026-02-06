@@ -4,6 +4,8 @@ services:
     build:
       context: .
       args:
-        - BAZ=${FOO}:${BAR}
+        - FOO=$FOO
+        - BAR=$BAR
     environment:
-      - BAZ=${FOO}:${BAR}
+      - FOO=$FOO
+      - BAR=$BAR

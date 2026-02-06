@@ -6,7 +6,10 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-ARG BAZ
+ARG FOO
+ARG BAR
+
+ENV BAZ=$FOO:$BAR
 
 RUN cargo install --path .
 
@@ -17,8 +20,10 @@ RUN apk add --no-cache --update tini
 
 COPY --from=builder /usr/local/cargo/bin/rsenv /usr/local/bin/rsenv
 
-ARG BAZ
+ARG FOO
+ARG BAR
 
+ENV BAZ=$FOO:$BAR
 
 ENTRYPOINT ["/sbin/tini", "--"]
 
