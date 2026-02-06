@@ -9,6 +9,7 @@ workers:
       - key: BAR
         scope: RUN_AND_BUILD_TIME
         value: ipsum
+    dockerfile_path: Dockerfile
     github:
       repo: innovabin-agent/rs-teszt
       branch: main
