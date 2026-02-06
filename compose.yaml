@@ -1,0 +1,9 @@
+services:
+
+  app:
+    build:
+      context: .
+      args:
+        - BAZ=${FOO}:${BAR}
+    environment:
+      - BAZ=${FOO}:${BAR}
