@@ -11,6 +11,8 @@ ARG BAR
 
 ENV BAZ=$FOO:$BAR
 
+RUN echo "BAZ: $BAZ"
+
 RUN cargo install --path .
 
 
