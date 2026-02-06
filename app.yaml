@@ -1,14 +1,15 @@
 name: rs-teszt
-services:
+workers:
 
   - name: app
-    build_envs:
-      - key: FOO
-        value: lorem
-      - key: BAR
-        value: ipsum
     envs:
       - key: FOO
+        scope: RUN_AND_BUILD_TIME
         value: lorem
       - key: BAR
+        scope: RUN_AND_BUILD_TIME
         value: ipsum
+    github:
+      repo: innovabin-agent/rs-teszt
+      branch: main
+      deploy_on_push: true
